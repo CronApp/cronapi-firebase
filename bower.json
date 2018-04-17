@@ -1,5 +1,6 @@
 {
   "name": "cronapi-firebase",
+  "version": "0.0.2",
   "homepage": "https://github.com/CronApp/cronapi-firebase",
   "authors": [
     "Rodrigo Reis <digo.santos.reis@gmail.com>"
