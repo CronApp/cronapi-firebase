@@ -14,7 +14,7 @@
    * @name {{configFirebase}}
    * @description {{configFirebaseDescription}}
    */
-  this.cronapi.firebase.configFirebase = function(/** @type {ObjectType.STRING} @description {{firebaseApiKey}} */	apiKey, /** @type {ObjectType.STRING} @description {{firebaseAuthDomain}} */	authDomain, /** @type {ObjectType.STRING} @description {{firebaseDatabaseURL}} */	databaseURL, /** @type {ObjectType.STRING} @description {{firebaseProjectId}}: Descrição do parâmetro */	projectId, /** @type {ObjectType.STRING} @description {{firebaseStorageBucket}}: Descrição do parâmetro */	storageBucket, /** @type {ObjectType.STRING} @description {{messagingSenderId}}: Descrição do parâmetro */	messagingSenderId, /** @type {ObjectType.STRING} @description {{firebaseProvider}}: Descrição do parâmetro */	provider, /** @type {ObjectType.STRING} @description {{firebaseUID}}: Descrição do parâmetro */	uid) {
+  this.cronapi.firebase.configFirebase = function(/** @type {ObjectType.STRING} @description {{firebaseApiKey}} */	apiKey, /** @type {ObjectType.STRING} @description {{firebaseAuthDomain}} */	authDomain, /** @type {ObjectType.STRING} @description {{firebaseDatabaseURL}} */	databaseURL, /** @type {ObjectType.STRING} @description {{firebaseProjectId}}*/	projectId, /** @type {ObjectType.STRING} @description {{firebaseStorageBucket}} */	storageBucket, /** @type {ObjectType.STRING} @description {{messagingSenderId}}*/	messagingSenderId, /** @type {ObjectType.STRING} @description {{firebaseProvider}} */	provider, /** @type {ObjectType.STRING} @description {{firebaseUID}} */	uid) {
 		var config = {
 			apiKey : apiKey,
 			authDomain : authDomain,
