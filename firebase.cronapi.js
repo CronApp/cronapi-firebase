@@ -11,10 +11,10 @@
   //Ref: https://firebase.google.com/docs/web/setup
   /**
    * @type function
-   * @name configFirebase
-   * @description configFirebase
+   * @name {{configFirebase}}
+   * @description {{configFirebaseDescription}}
    */
-  this.cronapi.firebase.configFirebase = function(/** @type {ObjectType.STRING} @description apiKey: Descrição do parâmetro */	apiKey, /** @type {ObjectType.STRING} @description authDomain: Descrição do parâmetro */	authDomain, /** @type {ObjectType.STRING} @description databaseURL: Descrição do parâmetro */	databaseURL, /** @type {ObjectType.STRING} @description projectId: Descrição do parâmetro */	projectId, /** @type {ObjectType.STRING} @description storageBucket: Descrição do parâmetro */	storageBucket, /** @type {ObjectType.STRING} @description messagingSenderId: Descrição do parâmetro */	messagingSenderId, /** @type {ObjectType.STRING} @description provider: Descrição do parâmetro */	provider, /** @type {ObjectType.STRING} @description uid: Descrição do parâmetro */	uid) {
+  this.cronapi.firebase.configFirebase = function(/** @type {ObjectType.STRING} @description {{firebaseApiKey}} */	apiKey, /** @type {ObjectType.STRING} @description {{firebaseAuthDomain}} */	authDomain, /** @type {ObjectType.STRING} @description {{firebaseDatabaseURL}} */	databaseURL, /** @type {ObjectType.STRING} @description {{firebaseProjectId}}: Descrição do parâmetro */	projectId, /** @type {ObjectType.STRING} @description {{firebaseStorageBucket}}: Descrição do parâmetro */	storageBucket, /** @type {ObjectType.STRING} @description {{messagingSenderId}}: Descrição do parâmetro */	messagingSenderId, /** @type {ObjectType.STRING} @description {{firebaseProvider}}: Descrição do parâmetro */	provider, /** @type {ObjectType.STRING} @description {{firebaseUID}}: Descrição do parâmetro */	uid) {
 		var config = {
 			apiKey : apiKey,
 			authDomain : authDomain,
@@ -33,11 +33,11 @@
   //Ref: https://firebase.google.com/docs/reference/js/firebase.database
   /**
    * @type function
-   * @name getDatabase
-   * @description getDatabase
+   * @name {{firebaseGetDatabase}}
+   * @description {{firebaseGetDatabaseDescription}}
    * @returns {ObjectType.OBJECT}
    */
-  this.cronapi.firebase.getDatabase = function(/** @type {ObjectType.STRING} @description optionalAppName: Descrição do parâmetro */	optionalAppName) {
+  this.cronapi.firebase.getDatabase = function(/** @type {ObjectType.STRING} @description {{firebaseOptionalAppName}} */	optionalAppName) {
     if(optionalAppName)		return window.firebase.database(optionalAppName);
 		return window.firebase.database();
   };
@@ -45,22 +45,21 @@
   //Ref: https://firebase.google.com/docs/database/web/read-and-write
   /**
    * @type function
-   * @name addData
-   * @description addData
+   * @name {{firebaseAddData}}
+   * @description {{firebaseAddDataDescription}}
    */
-  this.cronapi.firebase.addData = function(/** @type {ObjectType.OBJECT} @description database: Descrição do parâmetro */	database , /** @type {ObjectType.STRING} @description path: Descrição do parâmetro */ path , /** @type {ObjectType.OBJECT} @description data: Descrição do parâmetro */ data) {
-		debugger;
+  this.cronapi.firebase.addData = function(/** @type {ObjectType.OBJECT} @description {{firebaseDatabase}} */	database , /** @type {ObjectType.STRING} @description {{firebasePath}} */ path , /** @type {ObjectType.OBJECT} @description {{firebaseData}} */ data) {
 		database.ref(path).set(data);
   };
   
   
-    //Ref: https://firebase.google.com/docs/database/web/read-and-write
+  //Ref: https://firebase.google.com/docs/database/web/read-and-write
   /**
    * @type function
-   * @name addOnEvent
-   * @description addOnEvent
+   * @name {{firebaseAddOnEvent}}
+   * @description {{firebaseAddOnEventDescription}}
    */
-  this.cronapi.firebase.addOnEvent = function(/** @type {ObjectType.OBJECT} @description database: Descrição do parâmetro */	database , /** @type {ObjectType.STRING} @description path: Descrição do parâmetro */ path , /** @type {ObjectType.STATEMENTSENDER} @description statement: Descrição do parâmetro */ statement) {
+  this.cronapi.firebase.addOnEvent = function(/** @type {ObjectType.OBJECT} @description {{firebaseDatabase}} */	database , /** @type {ObjectType.STRING} @description {{firebasePath}} */ path , /** @type {ObjectType.STATEMENTSENDER} @description {{statement}} */ statement) {
 		database.ref(path).on('value',function(snapshot){
 		  statement(snapshot.val());
 		})
@@ -70,10 +69,10 @@
   //Ref: https://firebase.google.com/docs/database/web/read-and-write
   /**
    * @type function
-   * @name addOnEvent
-   * @description addOnEvent
+   * @name {{firebaseAddOnnceEvent}}
+   * @description{{firebaseAddOnnceEventDescription}}
    */
-  this.cronapi.firebase.addOnceEvent = function(/** @type {ObjectType.OBJECT} @description database: Descrição do parâmetro */	database , /** @type {ObjectType.STRING} @description path: Descrição do parâmetro */ path , /** @type {ObjectType.STATEMENTSENDER} @description statement: Descrição do parâmetro */ statement) {
+  this.cronapi.firebase.addOnceEvent = function(/** @type {ObjectType.OBJECT} @description {{firebaseDatabase}} */	database , /** @type {ObjectType.STRING} @description {{firebasePath}} */ path , /** @type {ObjectType.STATEMENTSENDER} @description {{statement}} */ statement) {
 		database.ref(path).once('value').then(function(snapshot){
 		  statement(snapshot.val());
 		});
@@ -82,10 +81,10 @@
     //Ref: https://firebase.google.com/docs/database/web/read-and-write
   /**
    * @type function
-   * @name updateData
-   * @description updateData
+   * @name {{firebaseUpdateData}}
+   * @description {{firebaseUpdateDataDescription}}
    */
-  this.cronapi.firebase.updateData = function(/** @type {ObjectType.OBJECT} @description database: Descrição do parâmetro */	database , /** @type {ObjectType.STRING} @description path: Descrição do parâmetro */ path , /** @type {ObjectType.OBJECT} @description data: Descrição do parâmetro */ data) {
+  this.cronapi.firebase.firebaseUpdateData = function(/** @type {ObjectType.OBJECT} @description {{firebaseDatabase}} */	database , /** @type {ObjectType.STRING} @description {{firebasePath}} */ path , /** @type {ObjectType.OBJECT} @description {{firebaseData}} */ data) {
 		database.ref(path).update(data);
   };
   
@@ -93,10 +92,10 @@
       //Ref: https://firebase.google.com/docs/database/web/read-and-write
   /**
    * @type function
-   * @name pushData
-   * @description pushData
+   * @name {{firebasePushData}}
+   * @description {{firebasePushDataDescription}}
    */
-  this.cronapi.firebase.pushData = function(/** @type {ObjectType.OBJECT} @description database: Descrição do parâmetro */	database , /** @type {ObjectType.STRING} @description path: Descrição do parâmetro */ path , /** @type {ObjectType.OBJECT} @description data: Descrição do parâmetro */ data) {
+  this.cronapi.firebase.pushData = function(/** @type {ObjectType.OBJECT} @description {{firebaseDatabase}} */	database , /** @type {ObjectType.STRING} @description {{firebasePath}} */ path , /** @type {ObjectType.OBJECT} @description {{firebaseData}} */ data) {
 		database.ref(path +'/'+ database.ref(path).push().key ).set(data);
   };
   
