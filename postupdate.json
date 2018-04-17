@@ -4,11 +4,6 @@
       "file": "index.html",
       "script": "plugins/cronapi-firebase/firebase.cronapi.js",
       "type": "script"
-    },
-	{
-      "file": "index.html",
-      "script": "plugins/cronapi-firebase/firebase_push.cronapi.js",
-      "type": "script"
     }
 	]
 }
