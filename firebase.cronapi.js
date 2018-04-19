@@ -15,7 +15,7 @@
    * @description {{configFirebaseDescription}}
    */
   this.cronapi.firebase.configFirebase = function(/** @type {ObjectType.STRING} @description {{firebaseApiKey}} */	apiKey, /** @type {ObjectType.STRING} @description {{firebaseAuthDomain}} */	authDomain, /** @type {ObjectType.STRING} @description {{firebaseDatabaseURL}} */	databaseURL, /** @type {ObjectType.STRING} @description {{firebaseProjectId}}*/	projectId, /** @type {ObjectType.STRING} @description {{firebaseStorageBucket}} */	storageBucket, /** @type {ObjectType.STRING} @description {{messagingSenderId}}*/	messagingSenderId, /** @type {ObjectType.STRING} @description {{firebaseProvider}} */	provider, /** @type {ObjectType.STRING} @description {{firebaseUID}} */	uid) {
-		var config = {
+		var config = { 
 			apiKey : apiKey,
 			authDomain : authDomain,
 			databaseURL : databaseURL,
