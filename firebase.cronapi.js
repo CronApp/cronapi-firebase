@@ -25,6 +25,7 @@
 			provider : provider,
 			uid : uid
 		};
+		if(window.firebase.apps === [])
 		window.firebase.initializeApp(config);
   };
   
