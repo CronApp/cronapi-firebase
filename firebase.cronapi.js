@@ -3,7 +3,7 @@
 
 
    /**
-   * @categoryName Firebase
+   * @categoryName Firebase Realtime
    */
   this.cronapi.firebase = {};
   
@@ -70,8 +70,8 @@
   //Ref: https://firebase.google.com/docs/database/web/read-and-write
   /**
    * @type function
-   * @name {{firebaseAddOnnceEvent}}
-   * @description{{firebaseAddOnnceEventDescription}}
+   * @name {{firebaseAddOnceEvent}}
+   * @description {{firebaseAddOnceEventDescription}}
    */
   this.cronapi.firebase.addOnceEvent = function(/** @type {ObjectType.OBJECT} @description {{firebaseDatabase}} */	database , /** @type {ObjectType.STRING} @description {{firebasePath}} */ path , /** @type {ObjectType.STATEMENTSENDER} @description {{statement}} */ statement) {
 		database.ref(path).once('value').then(function(snapshot){
