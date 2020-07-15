@@ -7,7 +7,7 @@
     },
     {
       "file": "index.html",
-      "script": "plugins/cronapi-firebase/firebase.cronapi.js",
+      "script": "node_modules/cronapi-firebase/firebase.cronapi.js",
       "type": "script"
     }
 	]

@@ -1,0 +1,22 @@
+{
+    "name": "cronapi-firebase",
+    "version": "0.0.6",
+    "description": "A PouchDb plugin for CronApp",
+    "main": "firebase.cronapi.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/CronApp/cronapi-firebase"
+    },
+    "keywords": [
+        "firebase",
+        "cronapp",
+        "gluonsoft",
+        "cronapi"
+    ],
+    "author": "Lincoln Minto <lincolnminto@gmail.com>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/CronApp/cronapi-pouchdb/issues"
+    },
+    "homepage": "https://github.com/CronApp/cronapi-firebase"
+}
